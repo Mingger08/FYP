@@ -14,8 +14,6 @@
     padding: 0 10px;
     height: 84px;
     line-height: 84px;
-    /* display: flex; */
-    /* width: 100%; */
     color: #fff !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
@@ -27,26 +25,26 @@
     color: #fff !important;
   }
 
-
 .form-container{
     background: linear-gradient(#605CA8,#605CA8);
     font-family: Lato,sans-serif;
     font-size: 0;
-    padding: 0 12px;
+    padding: 0px 12px;
     border: 1px solid #605CA8;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 .form-container .form-icon{
     color: #fff;
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     text-shadow: 0 0 20px rgba(0,0,0,0.2);
     width: 50%;
-    padding: 70px 0;
+    padding: 110px 0;
     vertical-align: top;
     display: inline-block;
 }
+
 .form-container .form-icon1{
     color: #fff;
     font-size: 13px;
@@ -62,16 +60,16 @@
     margin: 0 0 12px;
     display: block;
 }
-.form-container .form-icon .signup a{
+.form-container .form-icon .login a{
     color: #fff;
     text-transform: capitalize;
     transition: all 0.3s ease;
 }
-.form-container .form-icon .signup a:hover{ text-decoration: underline; }
+.form-container .form-icon .login a:hover{ text-decoration: underline; }
 .form-container .form-horizontal{
     background: rgba(255,255,255,0.99);
     width: 50%;
-    padding: 10px 20px;
+    padding: 60px 30px;
     margin: -20px 0;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
@@ -93,7 +91,7 @@
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 0.5px;
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
 }
 .form-horizontal .form-group{
     background-color: rgba(255,255,255,0.15);
@@ -150,55 +148,13 @@
     transition: all 0.3s ease;
     padding: 10px 15px;
 }
+
+
 .form-horizontal .btn:hover,
 .form-horizontal .btn:focus{
     color: #fff;
     background-color: #605CA8;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-
-.form-horizontal .btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    font-family: Lato,sans-serif;
-    
-    
-}
-.form-horizontal .btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:nth-child(n+3), .btn-group>:not(.btn-check)+.btn {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.form-horizontal .btn-group>.btn-group:not(:first-child), .btn-group>.btn:not(:first-child) {
-    margin-left: -1px;
-}
-.form-horizontal .btn-group-vertical>.btn, .btn-group>.btn {
-    position: relative;
-    flex: 1 1 auto;
-}
-.form-horizontal .btn-outline-primary {
-    color: #605CA8;
-    border-color: #605CA8;
-}
-.form-horizontal .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
-    color: #fff;
-    background-color: #605CA8;
-    background-image: none;
-    border-color: #605CA8;
-}
-
-.form-horizontal .btn-check {
-    position: absolute;
-    clip: rect(0,0,0,0);
-    pointer-events: none;
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
-    box-sizing: border-box;
-    margin: 3px 3px 0px 5px;
-    padding: initial;
-    border: initial;
 }
 
 
@@ -217,14 +173,11 @@
 }
 
 
-
-
-
 @media only screen and (max-width:570px){
     .form-container{ padding-bottom: 10
         px; }
     .form-container .form-icon{
-        width: 100%;
+        width: 87%;
         padding: 10px 20px;
     }
     .form-container .form-horizontal{
