@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/login.css">
@@ -43,8 +43,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#services">SERVICES</a></li>
-                    <li><a href="register.php">SIGN UP</a></li>
-                    <li><a href="login.php"><i class="fa fa-lock"></i> LOGIN</a></li>
+                    <li><a href="register.html">SIGN UP</a></li>
+                    <li class="active"><a href="login.php"><i class="fa fa-lock"></i> LOGIN</a></li>
 
                 </ul>
             </div>
@@ -56,16 +56,15 @@
             <div class="form-bg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-3 col-md-6 col-sm-offset-0 col-sm-12">
                             <div class="form-container">
                                 <p>
-                                <div class="form-icon">
-                                    <img src="../images/media/business.png" width="280" height="150"></p>
-                                    <span class="signup">Don't have account?<a href="register.php">
+                                    <div class="form-icon">
+                                        <img src="../images/media/business.png" width="280" height="150"></p>
+                                <span class="signup">Don't have account?<a href="register.php">
                                             Signup</a></span>
                                 </div>
-                                <form class="form-horizontal" name="loginform" action="../html/loginaccount.php"
-                                    onSubmit="return loginformValidation();" method="POST">
+                                <form class="form-horizontal" name="loginform" action="../html/loginaccount.php" onSubmit="return loginformValidation();" method="POST">
 
                                     <div class="form-icon1">
                                         <img src="../images/media/businesslogo.png" width="120" height="120">
@@ -84,19 +83,19 @@
                                     </div>
                                     <div class="dropdown">
                                         <h6 class="title1">Login as:</h6>
-                                        
+
                                         <div class="btn-group" data-toggle="buttons">
                                             <label class="btn btn-default">
                                                 <input type="radio" id="btnradio1" name="usertype" value="Business Operator" /> Business Operator
-                                            </label> 
+                                            </label>
                                             <label class="btn btn-default">
                                                 <input type="radio" id="btnradio2" name="usertype" value="Admin" />Admin
-                                            </label> 
+                                            </label>
                                         </div>
-                                        </div>
-        
-       
-                                    <button class="btn-signin"  type="submit">Login</button>
+                                    </div>
+
+
+                                    <button class="btn-signin" type="submit">Login</button>
                                     <span class="forgot-pass"><a href="forgetpassword.html">Forgot
                                             Username/Password?</a></span>
                                 </form>
@@ -109,81 +108,80 @@
     </section><br><br><br><br>
 
 
-   
+
 
     <div class="container-fluid">
         <div class="row">
-            
-             
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-4 m-b-30">
-                                <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    About us
-                                </div>
-                                <p class="white-text">
-                                    <p><b>STUDENT ACCOMMODATION CENTRE</b></p>
-                                    <p><b>Student Affairs Department Universiti</b></p>
-                                        <p><b>Utara Malaysia</b></p>
-                                    <p>06010 Sintok</p>
-                                    <p>Kedah Darul Aman, Malaysia</p><br>
-                                    <i class="fa fa-phone-square"></i> +604-928 4150 &nbsp;&nbsp <i class="fa fa-fax"></i> +604-928 4175<br>
-                                    <i class= "	fa fa-envelope-o"></i> sac@uum.edu.my
-                                </p>
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 m-b-30">
+                            <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                About us
                             </div>
-                           
-                            <div class="col-md-4 m-b-30">
-                                <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    Quick Links
-                                </div>
-                                <div class="footer-links">
-                                    <a href="http://www.uum.edu.my/getting-to-uum.html">
+                            <p class="white-text">
+                                <p><b>STUDENT ACCOMMODATION CENTRE</b></p>
+                                <p><b>Student Affairs Department Universiti</b></p>
+                                <p><b>Utara Malaysia</b></p>
+                                <p>06010 Sintok</p>
+                                <p>Kedah Darul Aman, Malaysia</p><br>
+                                <i class="fa fa-phone-square"></i> +604-928 4150 &nbsp;&nbsp <i class="fa fa-fax"></i> +604-928 4175<br>
+                                <i class="	fa fa-envelope-o"></i> sac@uum.edu.my
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 m-b-30">
+                            <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                Quick Links
+                            </div>
+                            <div class="footer-links">
+                                <a href="http://www.uum.edu.my/getting-to-uum.html">
                                         Getting to UUM
                                     </a>
-                                    <a href="http://uum.edu.my/360/">
+                                <a href="http://uum.edu.my/360/">
                                        Virtual Tour
                                     </a>
-                                    <a href="http://www.uum.edu.my/index.php/main-contact">
+                                <a href="http://www.uum.edu.my/index.php/main-contact">
                                         Contact Us
                                     </a>
-                                    
-                                </div>
+
                             </div>
-                            <div class="col-md-4 m-b-30">
-                                <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    Locate Us
-                                </div>
-                                <div class="footer-links">
-                                    <a href="https://www.openstreetmap.org/search?whereami=1&query=6.4635%2C100.5055#map=14/6.4635/100.5055&layers=N">
-                                       <img src="../images/media/uummap.PNG" width="320" height="210">
-                                    </a>
-                                   
-                                </div>
-                                <div class="footer-social-links m-t-30">
-                                    <li> <a href="https://www.facebook.com/universitiutaramalaysia/">
-                                            <i class="fa fa-facebook" aria-hidden="true"> </i> </a>
-                                      
-                                        <a href="https://www.youtube.com/user/uumtube"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a>
-                                    </li>
-                                </div>
+                        </div>
+                        <div class="col-md-4 m-b-30">
+                            <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                Locate Us
+                            </div>
+                            <div class="footer-links">
+                                <a href="https://www.openstreetmap.org/search?whereami=1&query=6.4635%2C100.5055#map=14/6.4635/100.5055&layers=N">
+                                    <img src="../images/media/uummap.PNG" width="320" height="210">
+                                </a>
+
+                            </div>
+                            <div class="footer-social-links m-t-30">
+                                <li>
+                                    <a href="https://www.facebook.com/universitiutaramalaysia/">
+                                        <i class="fa fa-facebook" aria-hidden="true"> </i> </a>
+
+                                    <a href="https://www.youtube.com/user/uumtube"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a>
+                                </li>
                             </div>
                         </div>
                     </div>
-                </footer>
-                <div class="footer-bottom">
-                    <strong>Copyright &copy; 2022 <b>Universiti Utara Malaysia</b>.</strong> All rights
-          reserved.
-                   
                 </div>
+            </footer>
+            <div class="footer-bottom">
+                <strong>Copyright &copy; 2022 <b>Universiti Utara Malaysia</b>.</strong> All rights reserved.
+
             </div>
-        
+        </div>
+
     </div>
 
 
 
     <script>
-
         function loginformValidation() {
             /*Get Position*/
             var position = document.getElementById("position");
@@ -207,13 +205,14 @@
                 return false;
             }
         }
-
-
     </script>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'> </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'> </script>
-    <script src='https://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'> </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
+    </script>
+    <script src='https://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
+    </script>
 
 </body>
 
