@@ -5,13 +5,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="../css/register2.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    
     <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/footer.css">
-   
+    <link rel="stylesheet" href="../css/tab.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/tab.js"></script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -19,11 +19,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>UUMBIZ</title>
-    
+
 
 </head>
 
-<body style="background-color: rgba(226, 226, 226, 0.473);">
+<body style="background-color: rgba(226, 226, 226);">
     <!-- As a heading -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -36,14 +36,14 @@
                 <a class="navbar-brand" href="mainpage.php">
                     <img src="../images/media/saclogo.png" height="88">
                 </a>
-                   
-                
+
+
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#services">SERVICES</a></li>
-                    <li><a href="register.php">SIGN UP</a></li>
+                    <li class="active"><a href="register.php">SIGN UP</a></li>
                     <li><a href="login.php"><i class="fa fa-lock"></i> LOGIN</a></li>
 
                 </ul>
@@ -55,49 +55,67 @@
             <div class="form-bg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-3 col-md-6">
                             <div class="form-container">
                                 <div class="form-icon">
-                                   <p><img src="../images/media/business.png" width="280" height="150"></p>
-                                    <span class="login"> <p>Already have account? Please <a href="loginpage.php">login your account</a>.</p></a></span>
+                                    <p><img src="../images/media/business.png" width="280" height="150"></p>
+                                    <span class="login">
+                                        <p>Already have account? Please <a href="loginpage.php">login your account</a>.
+                                        </p></a>
+                                    </span>
                                 </div>
                                 <form class="form-horizontal" name="signupform" action="../html/registeraccount.php" onSubmit="return signupformValidation();" method="POST" enctype="multipart/form-data">
-                                    <div class="form-icon1">
-                                        <img src="../images/media/businesslogo.png" width="120" height="120">
+                                    <div id="tab-btn">
+                                        <a href="#" class="bo-tab active">Business Operator</a>
+                                        <a href="#" class="admin-tab">Admin</a>
                                     </div>
-                                    <h3 class="title">Please Register</h3>
-                                    
-                                   
-                                    <div class="form-group">
-                                        <span class="input-icon"><i class="fa fa-user"></i></span>
-                                        <input class="form-control"  type="text" name="staffid" placeholder="Staff ID" required="true">
+                                    <div class="bo-box">
+                                        <!-- <form class="form" action="#" method="post" id="login-form"> -->
+                                        <div class="form-icon1">
+                                            <img src="../images/media/businesslogo.png" width="120" height="120">
+                                        </div>
+                                        <h3 class="title">Please Register</h3>
+                                        <div class="form-group">
+                                            <span class="input-icon"><i class="fa fa-envelope"></i></span>
+                                            <input class="form-control" type="email" name="email" placeholder="name@example.com" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon"><i class="fa fa-lock"></i></span>
+                                            <input class="form-control" type="password" placeholder="Password" name="password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon"><i class="fa fa-lock"></i></span>
+                                            <input class="form-control" type="password" placeholder="Confirm Password" name="conpassword" required>
+                                        </div>
+
+                                        <button class="btn-signin" type="submit">Register</button>
+                                        <!-- </form> -->
                                     </div>
-                                    <div class="form-group">
-                                        <span class="input-icon"><i class="fa fa-envelope"></i></span>
-                                        <input class="form-control"  type="email"  name="email" placeholder="name@example.com" required>
+                                    <div class="admin-box">
+                                        <!-- <form class="form" action="#" method="post" id="reg-form"> -->
+                                        <div class="form-icon1">
+                                            <img src="../images/media/businesslogo.png" width="120" height="120">
+                                        </div>
+                                        <h3 class="title">Please Register</h3>
+                                        <div class="form-group">
+                                            <span class="input-icon"><i class="fa fa-user"></i></span>
+                                            <input class="form-control" type="text" name="staffid" placeholder="Staff ID" required="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon"><i class="fa fa-envelope"></i></span>
+                                            <input class="form-control" type="email" name="email" placeholder="name@example.com" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon"><i class="fa fa-lock"></i></span>
+                                            <input class="form-control" type="password" placeholder="Password" name="password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="input-icon"><i class="fa fa-lock"></i></span>
+                                            <input class="form-control" type="password" placeholder="Confirm Password" name="conpassword" required>
+                                        </div>
+                                        <button class="btn-signin" type="submit">Register</button>
+                                        <!-- </form> -->
                                     </div>
-                                    <div class="form-group">
-                                        <span class="input-icon"><i class="fa fa-lock"></i></span>
-                                        <input class="form-control" type="password" placeholder="Password" name="password"  required>
-                                    </div>
-                                    <div class="form-group">
-                                        <span class="input-icon"><i class="fa fa-lock"></i></span>
-                                        <input class="form-control" type="password" placeholder="Confirm Password" name="conpassword"  required>
-                                    </div>
-                                        <!-- <div class="dropdown">
-                                            <h6 class="title1">Register as:</h6>
-                                            
-                                            <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-default">
-                    <input type="radio" id="btnradio1" name="usertype" value="Employee" /> Employee
-                </label> 
-                <label class="btn btn-default">
-                    <input type="radio" id="btnradio2" name="usertype" value="Employer" /> Employer
-                </label> 
-            </div>
-                                        </div><br><br><br> -->
-                                        
-                                    <button class="btn-signin" type="submit">Register</button>
                                 </form>
                             </div>
                         </div>
@@ -109,73 +127,73 @@
 
     <div class="container-fluid">
         <div class="row">
-            
-             
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-4 m-b-30">
-                                <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    About us
-                                </div>
-                                <p class="white-text">
-                                    <p><b>STUDENT ACCOMMODATION CENTRE</b></p>
-                                    <p><b>Student Affairs Department Universiti</b></p>
-                                        <p><b>Utara Malaysia</b></p>
-                                    <p>06010 Sintok</p>
-                                    <p>Kedah Darul Aman, Malaysia</p><br>
-                                    <i class="fa fa-phone-square"></i> +604-928 4150 &nbsp;&nbsp <i class="fa fa-fax"></i> +604-928 4175<br>
-                                    <i class= "	fa fa-envelope-o"></i> sac@uum.edu.my
-                                </p>
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 m-b-30">
+                            <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                About us
                             </div>
-                           
-                            <div class="col-md-4 m-b-30">
-                                <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    Quick Links
-                                </div>
-                                <div class="footer-links">
-                                    <a href="http://www.uum.edu.my/getting-to-uum.html">
-                                        Getting to UUM
-                                    </a>
-                                    <a href="http://uum.edu.my/360/">
-                                       Virtual Tour
-                                    </a>
-                                    <a href="http://www.uum.edu.my/index.php/main-contact">
-                                        Contact Us
-                                    </a>
-                                    
-                                </div>
+                            <p class="white-text">
+                                <p><b>STUDENT ACCOMMODATION CENTRE</b></p>
+                                <p><b>Student Affairs Department Universiti</b></p>
+                                <p><b>Utara Malaysia</b></p>
+                                <p>06010 Sintok</p>
+                                <p>Kedah Darul Aman, Malaysia</p><br>
+                                <i class="fa fa-phone-square"></i> +604-928 4150 &nbsp;&nbsp <i class="fa fa-fax"></i> +604-928 4175<br>
+                                <i class="	fa fa-envelope-o"></i> sac@uum.edu.my
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 m-b-30">
+                            <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                Quick Links
                             </div>
-                            <div class="col-md-4 m-b-30">
-                                <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    Locate Us
-                                </div>
-                                <div class="footer-links">
-                                    <a href="https://www.openstreetmap.org/search?whereami=1&query=6.4635%2C100.5055#map=14/6.4635/100.5055&layers=N">
-                                       <img src="../images/media/uummap.PNG" width="320" height="210">
-                                    </a>
-                                   
-                                </div>
-                                <div class="footer-social-links m-t-30">
-                                    <li> <a href="https://www.facebook.com/universitiutaramalaysia/">
-                                            <i class="fa fa-facebook" aria-hidden="true"> </i> </a>
-                                      
-                                        <a href="https://www.youtube.com/user/uumtube"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a>
-                                    </li>
-                                </div>
+                            <div class="footer-links">
+                                <a href="http://www.uum.edu.my/getting-to-uum.html">
+                                    Getting to UUM
+                                </a>
+                                <a href="http://uum.edu.my/360/">
+                                    Virtual Tour
+                                </a>
+                                <a href="http://www.uum.edu.my/index.php/main-contact">
+                                    Contact Us
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 m-b-30">
+                            <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                Locate Us
+                            </div>
+                            <div class="footer-links">
+                                <a href="https://www.openstreetmap.org/search?whereami=1&query=6.4635%2C100.5055#map=14/6.4635/100.5055&layers=N">
+                                    <img src="../images/media/uummap.PNG" width="320" height="210">
+                                </a>
+
+                            </div>
+                            <div class="footer-social-links m-t-30">
+                                <li>
+                                    <a href="https://www.facebook.com/universitiutaramalaysia/">
+                                        <i class="fa fa-facebook" aria-hidden="true"> </i> </a>
+
+                                    <a href="https://www.youtube.com/user/uumtube"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a>
+                                </li>
                             </div>
                         </div>
                     </div>
-                </footer>
-                <div class="footer-bottom">
-                    <strong>Copyright &copy; 2022 <b>Universiti Utara Malaysia</b>.</strong> All rights
-          reserved.
-                   
                 </div>
+            </footer>
+            <div class="footer-bottom">
+                <strong>Copyright &copy; 2022 <b>Universiti Utara Malaysia</b>.</strong> All rights reserved.
+
             </div>
-        
+        </div>
+
     </div>
-  
+
     <script>
         function preview() {
             frame.src = URL.createObjectURL(event.target.files[0]);
@@ -219,9 +237,12 @@
         }
     </script>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'> </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'> </script>
-<script src='https://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'> </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'>
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
+    </script>
+    <script src='https://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
+    </script>
 
 </body>
 
