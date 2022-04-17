@@ -10,7 +10,7 @@
   position: fixed;
   height: 100%;
   width: 240px;
-  background: #0A2558;
+  background: #4b4882;
   transition: all 0.5s ease;
 }
 .sidebar.active{
@@ -35,11 +35,13 @@
 }
 .sidebar .nav-links{
   margin-top: 10px;
+  
 }
 .sidebar .nav-links li{
   position: relative;
   list-style: none;
   height: 50px;
+
 }
 .sidebar .nav-links li a{
   height: 100%;
@@ -88,7 +90,7 @@
   display: flex;
   justify-content: space-between;
   height: 80px;
-  background: #fff;
+  background: #605CA8;
   display: flex;
   align-items: center;
   position: fixed;
@@ -155,12 +157,12 @@ nav .search-box .bx-search{
   min-width: 190px;
   padding: 0 15px 0 2px;
 }
-nav .profile-details img{
+/* nav .profile-details img{
   height: 40px;
   width: 40px;
   border-radius: 6px;
   object-fit: cover;
-}
+} */
 nav .profile-details .admin_name{
   font-size: 15px;
   font-weight: 500;
@@ -168,14 +170,16 @@ nav .profile-details .admin_name{
   margin: 0 10px;
   white-space: nowrap;
 }
+
 nav .profile-details i{
   font-size: 25px;
   color: #333;
 }
+
 .home-section .home-content{
   position: relative;
   padding-top: 104px;
-  min-height: 600px;
+  min-height: 800px;
 }
 .home-content .overview-boxes{
   display: flex;
@@ -255,9 +259,9 @@ nav .profile-details i{
   font-weight: 500;
 }
 .home-content .sales-boxes{
-  display: flex;
-  justify-content: space-between;
-  /* padding: 0 20px; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  padding: 0 50px;
 }
 
 /* left box */
@@ -273,6 +277,7 @@ nav .profile-details i{
   display: flex;
   align-items: center;
   justify-content: space-between;
+ 
 }
 .sales-boxes .box .title{
   font-size: 24px;
@@ -345,6 +350,22 @@ nav .profile-details i{
   font-size: 17px;
   font-weight: 400;
   color: #333;
+}
+#avatar {
+
+  
+  /* make a square container */
+  width: 50px;
+  height: 50px;
+
+  /* fill the container, preserving aspect ratio, and cropping to fit */
+  background-size: cover;
+
+  /* center the image vertically and horizontally */
+  background-position: top center;
+
+  /* round the edges to a circle with border radius 1/2 container size */
+  border-radius: 50%;
 }
 /* Responsive Media Query */
 @media (max-width: 1240px) {

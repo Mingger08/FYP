@@ -184,7 +184,7 @@
 .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    margin-left: 10px;
+    margin-left: 40px;
     margin-bottom: 20px;
     font-family: Lato, sans-serif;
 }
