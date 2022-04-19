@@ -52,3 +52,53 @@ body{
     box-shadow: none!important;
 }
 
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 180px;
+   
+  }
+  
+  /* Make the image to responsive */
+  .rounded-circle {
+    width: 100%;
+    width:160px;
+  }
+  
+  /* The overlay effect (full height and width) - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;
+    top: 128px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #605ca898;
+  }
+  
+  /* When you mouse over the container, fade in the overlay icon*/
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* The icon inside the overlay is positioned in the middle vertically and horizontally */
+  .icon {
+    color: black;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* When you move the mouse over the icon, change color */
+  .fa-camera:hover {
+    color: #eee;
+  }
+  
