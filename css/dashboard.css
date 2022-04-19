@@ -358,6 +358,11 @@ nav .profile-details i{
   justify-content: space-between;
  
 }
+.sales-boxes .box .title{
+  font-size: 24px;
+  font-weight: 500;
+  /* margin-bottom: 10px; */
+}
 .sales-boxes2 .box .title{
   font-size: 24px;
   font-weight: 500;
@@ -476,11 +481,13 @@ nav .profile-details i{
   .home-content .sales-boxes{
     flex-direction: column;
   }
+ 
   .home-content .sales-boxes .box{
     width: 100%;
-    /* overflow-x: scroll; */
+    overflow-x: scroll;
     margin-bottom: 30px;
   }
+
   .home-content .sales-boxes .top-sales{
     margin: 0;
   }
