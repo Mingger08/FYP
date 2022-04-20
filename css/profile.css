@@ -29,6 +29,18 @@ body{
     padding: 1rem;
 }
 
+.card-body1 {
+    flex: 1 1 auto;
+    /* min-height: 1px; */
+    color: #605CA8;
+}
+
+.card-body1 .panel-group .panel-heading {
+    background-color: #635ec1c6;
+    
+}
+
+
 .gutters-sm {
     margin-right: -8px;
     margin-left: -8px;
@@ -57,7 +69,6 @@ body{
     position: relative;
     width: 100%;
     max-width: 180px;
-   
   }
   
   /* Make the image to responsive */
