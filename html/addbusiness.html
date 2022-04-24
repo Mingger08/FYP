@@ -43,7 +43,7 @@
                 </a>
             </li>
             <li>
-                <a href="userbusiness.html">
+                <a href="userbusiness.html" class="active">
                     <i class='bx bx-list-ul'></i>
                     <span class="links_name">Manage Business</span>
                 </a>
@@ -61,7 +61,7 @@
                 </a>
             </li>
             <li>
-                <a href="usercomplaint.html" class="active">
+                <a href="usercomplaint.html" >
                     <i class='bx bx-comment-dots'></i>
                     <span class="links_name">Add Complaint</span>
                 </a>
@@ -110,95 +110,93 @@
                                     <div class="card mb-3">
                                         <div class="card-body">
                                             <div class="row">
-                                                <div class="col-sm-5">
-                                                    <h4><i class="fa fa-comments-o"></i> Enter Your New Complaint</h4>
+                                                <div class="col-sm-12">
+                                                    <h4><i class="fa fa-briefcase"></i> Enter Your New Business Information</h4>
                                                     <br>
                                                 </div>
                                             </div><br>
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-id-badge"></i> &nbsp; Operator ID
+                                                    <h6 class="mb-0"><i class="bx bx-grid-alt"></i> &nbsp; Business Category
                                                     </h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Enter Operator ID" name="operatorid" value=""
-                                                        readonly>
+                                                    <input class="form-control" list="businessOptions"
+                                                        onfocus=this.value='' id="business" name="business" required
+                                                        value="" placeholder="Please Choose" required>
+                                                    <datalist id="businessOptions">
+                                                       
+                                                        <option value="ATM">
+                                                        <option value="Laundry">
+                                                        <option value="Shop">
+                                                            <option value="Telecommunication Equipment (Substation)">
+                                                        <option value="UPC">
+                                                        <option value="Vending Machine">
+                                                    </datalist>
                                                 </div>
 
                                             </div>
                                             <hr>
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-user"></i> &nbsp; Operator Name
+                                                    <h6 class="mb-0"><i class="fa fa-map-pin"></i> &nbsp; Premise Location @ Address
                                                     </h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
                                                     <input type="text" class="form-control"
-                                                        placeholder="Enter Operator Name" name="operatorname" value=""
+                                                        placeholder="Enter Premise Location @ Address" name="businesslocation" value=""
                                                         required>
                                                 </div>
                                             </div>
                                             <hr>
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-phone"></i> &nbsp;Contact Number
+                                                    <h6 class="mb-0"><i class="fa fa-building"></i> &nbsp;Business Zone
                                                     </h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Enter Contact Number" name="contactnum" required>
+                                                    <input class="form-control" list="zoneOptions"
+                                                        onfocus=this.value='' id="zone" name="zone" required
+                                                        value="" placeholder="Please Choose" required>
+                                                    <datalist id="zoneOptions">
+                                                        <option value="Accommodation">
+                                                        <option value="Administrative">
+                                                      
+                                                    </datalist>
                                                 </div>
                                             </div>
                                             <hr>
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="bx bx-grid-alt"></i> &nbsp;Type of Complaint
+                                                    <h6 class="mb-0"><i class="fa fa-calendar"></i> &nbsp;Contract Date
                                                     </h6>
                                                 </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input class="form-control" list="complaintOptions"
-                                                        onfocus=this.value='' id="complaint" name="complaint" required
-                                                        value="" placeholder="Please Choose" required>
-                                                    <datalist id="complaintOptions">
-                                                        <option value="Cleanliness">
-                                                        <option value="Maintenance">
-                                                        <option value="Security">
-                                                        <option value="Utility">
-                                                        <option value="Rental">
-                                                        <option value="Others">
-                                                    </datalist>
+                                                <div class="col-sm-4 text-secondary">
+                                                    <div class="form-group">
+                                                        <div class='input-group date' id='datetimepicker1'>
+                                                            <input type='text' class="form-control" name="startdate" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div></div>
+                                                
+                                                </div>
+                                                <div class='col-sm-1'>
+                                                    <h6 class="mb-0" >to</h6>
+                                                </div>
+                                                <div class="col-sm-4 text-secondary">
+                                                    <div class="form-group">
+                                    
+                                                        <div class='input-group date' id='datetimepicker2'>
+                                                            <input type='text' class="form-control" name="enddate" />
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <br><br>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-at"></i> &nbsp; Title </h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Enter Title of Complaint" name="title" required>
-                                                </div>
-                                            </div><br><br>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-pencil"></i> &nbsp; Description </h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Enter Description of Complaint" name="description" required>
-                                                </div>
-                                            </div><br><br>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-file-o"></i> &nbsp; Attachments (optional) </h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                 
-                                                        <input type="file" id="myFile" name="filename">
-                                                    
-                                                </div>
-                                            </div>
+                                           
                                             <hr>
                                             <div class="row">
                                                 <div class="col-sm-12">
