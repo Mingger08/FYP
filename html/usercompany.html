@@ -18,8 +18,8 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
-
     <title>UUMBIZ</title>
+
 
 </head>
 
@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li>
-                <a href="usercompany.html">
+                <a href="usercompany.html" class="active">
                     <i class='bx bx-building'></i>
                     <span class="links_name">Manage Company</span>
                 </a>
@@ -61,7 +61,7 @@
                 </a>
             </li>
             <li>
-                <a href="usercomplaint.html" class="active">
+                <a href="usercomplaint.html">
                     <i class='bx bx-comment-dots'></i>
                     <span class="links_name">Add Complaint</span>
                 </a>
@@ -102,7 +102,7 @@
                 <div class="sales-boxes">
 
                     <div class="main-body">
-                       
+
                         <div class="row gutters-sm">
 
                             <div class="col-md-12">
@@ -111,100 +111,95 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-sm-5">
-                                                    <h4><i class="fa fa-comments-o"></i> Enter Your New Complaint</h4>
+                                                    <h4><i class="fa fa-comments-o"></i> Enter Your Company Information</h4>
                                                     <br>
                                                 </div>
                                             </div><br>
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-id-badge"></i> &nbsp; Operator ID
+                                                    <h6 class="mb-0"><i class="fa fa-at"></i> &nbsp; Company ID
                                                     </h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
                                                     <input type="text" class="form-control"
-                                                        placeholder="Enter Operator ID" name="operatorid" value=""
-                                                        readonly>
+                                                        placeholder="Enter Company ID (Company Registration No.)" name="companyid" value=""
+                                                        required>
                                                 </div>
 
                                             </div>
                                             <hr>
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-user"></i> &nbsp; Operator Name
+                                                    <h6 class="mb-0"><i class="fa fa-building"></i> &nbsp; Company Name
                                                     </h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
                                                     <input type="text" class="form-control"
-                                                        placeholder="Enter Operator Name" name="operatorname" value=""
+                                                        placeholder="Enter Company Name" name="companyname" value=""
                                                         required>
                                                 </div>
                                             </div>
                                             <hr>
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-phone"></i> &nbsp;Contact Number
+                                                    <h6 class="mb-0"><i class="bx bx-map-pin"></i> &nbsp;Company Address
                                                     </h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
                                                     <input type="text" class="form-control"
-                                                        placeholder="Enter Contact Number" name="contactnum" required>
+                                                        placeholder="Enter Company Address" name="address" required>
                                                 </div>
                                             </div>
                                             <hr>
                                             <div class="row">
                                                 <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="bx bx-grid-alt"></i> &nbsp;Type of Complaint
+                                                    <h6 class="mb-0"><i class="fa fa-user-circle"></i> &nbsp;Name of Person In-Charge
                                                     </h6>
                                                 </div>
                                                 <div class="col-sm-9 text-secondary">
-                                                    <input class="form-control" list="complaintOptions"
-                                                        onfocus=this.value='' id="report" name="complaint" required
-                                                        value="" placeholder="Please Choose" required>
-                                                    <datalist id="complaintOptions">
-                                                        <option value="Cleanliness">
-                                                        <option value="Maintenance">
-                                                        <option value="Security">
-                                                        <option value="Utility">
-                                                        <option value="Rental">
-                                                        <option value="Others">
-                                                    </datalist>
-                                                </div>
-                                            </div>
-                                            <br><br>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-at"></i> &nbsp; Title </h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
                                                     <input type="text" class="form-control"
-                                                        placeholder="Enter Title of Complaint" name="title" required>
-                                                </div>
-                                            </div><br><br>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-pencil"></i> &nbsp; Description </h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Enter Description of Complaint" name="description" required>
-                                                </div>
-                                            </div><br><br>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0"><i class="fa fa-file-o"></i> &nbsp; Attachments (optional) </h6>
-                                                </div>
-                                                <div class="col-sm-9 text-secondary">
-                                                 
-                                                        <input type="file" id="myFile" name="filename">
-                                                    
+                                                        placeholder="Enter Name of Person In-Charge" name="personname" required>
                                                 </div>
                                             </div>
                                             <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <h6 class="mb-0"><i class="fa fa-street-view"></i> &nbsp;Position
+                                                    </h6>
+                                                </div>
+                                                <div class="col-sm-9 text-secondary">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Enter Position of Person In-Charge" name="personposition" required>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <h6 class="mb-0"><i class="fa fa-fax"></i> &nbsp; Company Tel No. </h6>
+                                                </div>
+                                                <div class="col-sm-9 text-secondary">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Enter Company Tel No. (eg. 04-6789765)" name="companytel" required>
+                                                </div>
+                                            </div><hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <h6 class="mb-0"><i class="fa fa-mobile" style="font-size:16px"></i> &nbsp; Personal Tel No.
+                                                    </h6>
+                                                </div>
+                                                <div class="col-sm-9 text-secondary">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Enter Personal Tel No." name="persontel"
+                                                        required>
+                                                </div>
+                                            </div><hr>
                                             <div class="row">
                                                 <div class="col-sm-12">
-                                                    <input type="submit" class="btn btn-success pull-right" value="Submit"> &nbsp;&nbsp
-                                                    <input type="submit" class="btn btn-danger pull-left" value="Cancel">
-                                                    
+                                                    <input type="submit" class="btn btn-success pull-right"
+                                                        value="Save"> &nbsp;&nbsp
+                                                    <input type="submit" class="btn btn-danger pull-left"
+                                                        value="Cancel">
+
                                                 </div>
                                             </div>
                                         </div>
