@@ -1,299 +1,297 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/profile.css">
-    <link rel="stylesheet" href="../css/addform.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <!-- table -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-     
-     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-     <script src="../js/addform.js"></script>
-     
-   <title>UUMBIZ</title>
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StaffDashboard</title>
+    <!--Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/AdminLTE.min.css">
+    <!-- skin color -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/css/skins/skin-purple.min.css">
+    <!-- table -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <!--digital clock-->
+    <link rel="stylesheet" href="../css/digitalclock.css">
+    <!-- analogclock -->
+    <link rel="stylesheet" href="../css/analogclock.css">
+    <link rel="stylesheet" href="../css/daterangepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
+
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-<body>
-    <div class="sidebar">
-        <div class="logo-details">
-            <i class='bx bx-buildings'></i>
-            <span class="logo_name">UUMBIZ</span>
-        </div>
-        <ul class="nav-links">
-            <li>
-                <a href="admindashboard.html" >
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="links_name">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="admincompany.html" >
-                    <i class='bx bx-building'></i>
-                    <span class="links_name">Company</span>
-                </a>
-            </li>
-            <li>
-                <a href="adminbusiness.html">
-                    <i class='bx bx-list-ul'></i>
-                    <span class="links_name">Business</span>
-                </a>
-            </li>
-            <li>
-                <a href="adminemployee.html">
-                    <i class='bx bx-user-circle'></i>
-                    <span class="links_name">Employee</span>
-                </a>
-            </li>
-            <li>
-                <a href="adminrent.html">
-                    <i class='bx bx-bell'></i>
-                    <span class="links_name">Rent Reminder</span>
-                </a>
-            </li>
-            <li>
-                <a href="admincontract.html">
-                    <i class='bx bx-book-alt'></i>
-                    <span class="links_name">Contract Reminder</span>
-                </a>
-            </li>
-            <li>
-                <a href="adminr&c.html">
-                    <i class='bx bx-comment-dots'></i>
-                    <span class="links_name">Report & Complaint</span>
-                </a>
-            </li>
-           
-            <li class="log_out">
-                <a href="#">
-                    <i class='bx bx-log-out'></i>
-                    <span class="links_name">Log out</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <section class="home-section">
-        <nav>
-            <div class="sidebar-button">
-                <i class='bx bx-menu sidebarBtn'></i>
-                <span class="dashboard" > <img src="../images/media/saclogo.png" height="88"></span>
-            </div>
-           
-            <div class="dropdown">
-                <button class="profile-details dropdown-toggle" type="button" data-toggle="dropdown" >
-            
-                <img src="../images/media/user.png" id="avatar" alt="">
-                <span class="admin_name">Prem Shahi</span>
-                <i class='bx bx-chevron-down'></i></button>
-                <ul class="dropdown-menu pull-right">
-                    <li><a href="profile.html">Manage Profile</a></li>
-                  
-                  </ul>
-            </div>
-        </nav>
 
-        <div class="home-content">
-            
-          
-            <section>
-                <div class="sales-boxes">
-                          
-                                <div class="row justify-content-center">
-                                  
-                                        <div class="card">
-                                            <h2 id="heading">Create New Operator Account</h2>
-                                            <p>Fill all form field to go to next step</p>
-                                            <form id="msform">
-                                                <!-- progressbar -->
-                                                <ul id="progressbar">
-                                                    <li class="active" id="personal"><strong>Personal</strong></li>
-                                                    <li id="account"><strong>Company</strong></li>
-                                                    <li id="confirm"><strong>Finish</strong></li>
-                                                </ul>
-                                              
-                                                <fieldset>
-                                                    <div class="form-card">
-                                                        <div class="row">
-                                                            <div class="col-7">
-                                                                <h2 class="fs-title">Business Operator Information:</h2>
-                                                            </div>
-                                                            <div class="col-5">
-                                                                <h2 class="steps">Step 1 - 3</h2>
-                                                            </div>
-                                                        </div> 
-                                                        <label class="fieldlabels">Name: *</label> <input type="text" name="name" placeholder="Name" required/> 
-                                                        <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="Email (eg. abc@example.com)" required/> 
-                                                        <label class="fieldlabels">Contact No.: *</label> <input type="tel" name="phone" placeholder="Contact No. (eg. 0123456789)" required /> 
-                                                       
-                                                    </div> <input type="button" name="next" class="next action-button" value="Next" />
-                                                </fieldset>
-                                                <fieldset>
-                                                    <div class="form-card">
-                                                        <div class="row">
-                                                            <div class="col-7">
-                                                                <h2 class="fs-title">Company Information:</h2>
-                                                            </div>
-                                                            <div class="col-5">
-                                                                <h2 class="steps">Step 2 - 3</h2>
-                                                            </div>
-                                                        </div> 
-                                                        <label class="fieldlabels">Company Name: *</label> <input type="text" name="compname" placeholder="Company Name" /> 
-                                                        <label class="fieldlabels">Company Address: *</label> <input type="text" name="compaddress" placeholder="Company Address" /> 
-                                                        <label class="fieldlabels">Name of Person In-Charge: *</label> <input type="text" name="personname" placeholder="Name of Person In-Charge" /> 
-                                                        <label class="fieldlabels">Position: *</label> <input type="text" name="position" placeholder="Position (eg. Manager)" />
-                                                        <label class="fieldlabels">Company Tel No.: *</label> <input type="text" name="companytel" placeholder="Tel No. (eg. 04-7865890)." />
-                                                        <label class="fieldlabels">Person In-Charge Tel No.: *</label> <input type="tel" name="personaltel" placeholder="Tel No. (eg. 0123456789)" />
-                                                    </div> 
-                                                    <input type="button" name="next" class="next action-button" value="Next" /> 
-                                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                                                </fieldset>
-                                                <!-- <fieldset>
-                                                    <div class="form-card">
-                                                        <div class="row">
-                                                            <div class="col-7">
-                                                                <h2 class="fs-title">Image Upload:</h2>
-                                                            </div>
-                                                            <div class="col-5">
-                                                                <h2 class="steps">Step 3 - 4</h2>
-                                                            </div>
-                                                        </div> <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="pic" accept="image/*">
-                                                    </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                                                </fieldset> -->
-                                                <fieldset>
-                                                    <div class="form-card2">
-                                                        <div class="row">
-                                                            <div class="col-7">
-                                                                <h2 class="fs-title">Finish:</h2>
-                                                            </div>
-                                                            <div class="col-5">
-                                                                <h2 class="steps">Step 3 - 3</h2>
-                                                            </div>
-                                                        </div> <br><br>
-                                                        <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
-                                                        <div class="row justify-content-center">
-                                                            <div class="col-4"> <img src="https://i.imgur.com/GwStPmg.png"  height="80px" width="80px" text-align="center"> </div>
-                                                        </div> <br><br>
-                                                        <div class="row justify-content-center">
-                                                            <div class="col-7 text-center">
-                                                                <h4 class="purple-text text-center">The operator is added successfully.</h4>
-                                                                <h5 class="purple-text text-center"><a href="admindashboard.html">Back to dashboard</a></h5>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
-                                        </div>
-                                   
-                                </div>
-                          
+<body class="hold transition skin-purple sidebar-mini ">
+    
+    <div class="wrapper">
 
-                    
-                           
+        <!-- Main Header -->
+        <header class="main-header">
+
+            <!-- Logo -->
+            <a href="admindashboard.html" class="logo">
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg" style="font-family:Lato, sans-serif;letter-spacing: 4px;"><b>Work</b>ACT</span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+
+
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- The user image in the navbar-->
+                                <img src="<?php echo $image ?>" class="user-image" alt="User Image">
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs"><?php echo $name ?></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+                                <li class="user-header">
+                                    <img src="<?php echo $image ?>" class="img-circle" alt="User Image">
+                                    <p>
+                                        <?php echo $name ?>
+
+                                        <small> Staff ID:<?php echo $staffID ?></small>
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+
+
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="manageprofile.php" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" onclick="logOut()" class="btn btn-default btn-flat">Logout</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
                 </div>
+            </nav>
+        </header>
+
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="<?php echo $image ?>" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p><?php echo $name ?></p>
+                        <!-- Status -->
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div><br>
+
+
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li><a href="../html/staffdashboard.php"><i class="fa fa-file"></i> <span>Dashboard</span></a></li>
+                    <li class="header">ACTIVITIES MANAGEMENT</li>
+                    <!-- Optionally, you can add icons to the links -->
+                    <li class="active"><a href="#"><i class="fa fa-plus"></i> <span>Add Activities</span></a></li>
+                    <li><a href="../html/viewactivitiespage.php"><i class="fa fa-table"></i> <span>View Activities</span></a></li>
+                    <li class="header">LEAVE MANAGEMENT</li>
+                    <li><a href="../html/addleavepage.php"><i class="fa fa-plus"></i> <span>Add Leave</span></a></li>
+
+
+                </ul>
+                <!-- /.sidebar-menu -->
             </section>
+            <!-- /.sidebar -->
+        </aside>
 
-        </div>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <span>
+                    <h2>
+                        Add Activities
+                    </h2>
+                    <small>
+                        <ol class="breadcrumb" style="background-color: rgba(248, 244, 244, 0); position: absolute; top:6%; left:0.3%">
 
-        <div class="container-fluid">
-            <div class="row">
+                            <li><a href="#"> Home</a></li>
+                            <li><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                            <li class="active"><i class="fa fa-plus"></i> Add Activities</a></li>
 
+                        </ol>
+                    </small>
+                </span>
 
-                <footer class="footer">
-                    <div class="container-fluid">
+            </section><br>
+
+            <!-- Main content -->
+            <section>
+                <form method="post">
+
+                    <div class="container">
                         <div class="row">
-                            <div class="col-md-4 m-b-30">
-                                <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    About us
-                                </div>
-                                <p class="white-text">
-                                <p><b>STUDENT ACCOMMODATION CENTRE</b></p>
-                                <p><b>Student Affairs Department Universiti</b></p>
-                                <p><b>Utara Malaysia</b></p>
-                                <p>06010 Sintok</p>
-                                <p>Kedah Darul Aman, Malaysia</p><br>
-                                <i class="fa fa-phone-square"></i> +604-928 4150 &nbsp;&nbsp <i class="fa fa-fax"></i>
-                                +604-928 4175<br>
-                                <i class="	fa fa-envelope-o"></i> sac@uum.edu.my
-                                </p>
-                            </div>
-
-                            <div class="col-md-4 m-b-30">
-                                <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    Quick Links
-                                </div>
-                                <div class="footer-links">
-                                    <a href="http://www.uum.edu.my/getting-to-uum.html">
-                                        Getting to UUM
-                                    </a>
-                                    <a href="http://uum.edu.my/360/">
-                                        Virtual Tour
-                                    </a>
-                                    <a href="http://www.uum.edu.my/index.php/main-contact">
-                                        Contact Us
-                                    </a>
-
-                                </div>
-                            </div>
-                            <div class="col-md-4 m-b-30">
-                                <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    Locate Us
-                                </div>
-                                <div class="footer-links">
-                                    <a
-                                        href="https://www.openstreetmap.org/search?whereami=1&query=6.4635%2C100.5055#map=14/6.4635/100.5055&layers=N">
-                                        <img src="../images/media/uummap.PNG" width="320" height="210">
-                                    </a>
-
-                                </div>
-                                <div class="footer-social-links m-t-30">
-                                    <li>
-                                        <a href="https://www.facebook.com/universitiutaramalaysia/">
-                                            <i class="fa fa-facebook" aria-hidden="true"> </i> </a>
-
-                                        <a href="https://www.youtube.com/user/uumtube"> <i class="fa fa-youtube"
-                                                aria-hidden="true"> </i> </a>
-                                    </li>
+                            <div class="col-12">
+                                <div class="box box-danger">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title">New Activities</h3>
+                                    </div>
+                                    <div class="box-body">
+                                        <div class="form-group">
+                                            <label>Title</label>
+                                            <input type="text" class="form-control" placeholder="Enter ..." name="title">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Description</label>
+                                            <textarea class="form-control" rows="3" placeholder="Enter ..." name="description"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Status</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="Planning">
+                                                    Planning
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="Pending">
+                                                    Pending
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="Done">
+                                                    Done
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-6'>
+                                            <div class="form-group">
+                                                <label>Start Date:</label>
+                                                <div class='input-group date' id='datetimepicker1'>
+                                                    <input type='text' class="form-control" name="startdate" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='col-sm-6'>
+                                            <div class="form-group">
+                                                <label>End Date:</label>
+                                                <div class='input-group date' id='datetimepicker2'>
+                                                    <input type='text' class="form-control" name="enddate" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='col-12'>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">File Submit</label>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="filesubmit">
+                                            </div>
+                                        </div>
+                                        <div class='col-12'>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlFile1">Image Submit</label>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagesubmit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-12' style='padding: 15px'>
+                                    <button type="submit" class="btn btn-info" id="addactivities" style="width:120px;" name="addactivities">Submit</button>
+                                    </div>
+                                    <!-- /.box-body -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                </footer>
-                <div class="footer-bottom">
-                    <strong>Copyright &copy; 2022 <b>Universiti Utara Malaysia</b>.</strong> All rights reserved.
 
-                </div>
-            </div>
+                </form>
+            </section>
+        </div>
+    </div>
+    <!-- /.content-wrapper -->
 
-    </section>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            Created by Spider.com
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2022 <a href="#"><b>Work</b>ACT</a>.</strong> All rights reserved.
+    </footer>
 
+    </div>
+    <!-- ./wrapper -->
 
     <script>
-        let sidebar = document.querySelector(".sidebar");
-        let sidebarBtn = document.querySelector(".sidebarBtn");
-        sidebarBtn.onclick = function () {
-            sidebar.classList.toggle("active");
-            if (sidebar.classList.contains("active")) {
-                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-            } else
-                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-        }
-    </script>
-    
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'>
-    </script>
-    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
-    </script> -->
-    <script src='https://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
+       
+        $(function() {
+            $('#datetimepicker1').datetimepicker(
+                {
+                    format:'YYYY-MM-DD'
+                }
+            );
+           
+        });
+        $(function() {
+            $('#datetimepicker2').datetimepicker();
+            
+        });
+
+        
     </script>
 
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 2.2.3
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script> -->
+    <!-- Bootstrap 3.3.6 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.11/js/app.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
 </body>
 
 </html>
