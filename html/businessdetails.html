@@ -45,13 +45,13 @@
         </a>
       </li>
       <li>
-        <a href="adminbusiness.html">
+        <a href="adminbusiness.html"class="active">
           <i class='bx bx-list-ul'></i>
           <span class="links_name">Business</span>
         </a>
       </li>
       <li>
-        <a href="adminemployee.html" class="active">
+        <a href="adminemployee.html" >
           <i class='bx bx-user-circle'></i>
           <span class="links_name">Business Operator</span>
         </a>
@@ -112,283 +112,128 @@
               <div class="col-12">
                 <div class="card-body1">
                   <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <h4 class="panel-title">
-                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">COMPANY INFORMATION</a>
-                        </h4>
-                      </div>
-                      <div id="collapse1" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                          <form>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Company Address</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input type="text" style="border:none" class="form-control"
-                                  placeholder="Company Address" name="comaddress" value="" readonly>
-                              </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Name of Person In-Charge</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input type="text" style="border:none" class="form-control"
-                                  placeholder="Name of Person In-Charge" name="personname" value="" readonly>
-                              </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Company Tel No.</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input type="tel" style="border:none" class="form-control" placeholder="Company Tel No."
-                                  name="companytel" value="" readonly>
-                              </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Person In-Charge Tel No.</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input type="tel" style="border:none" class="form-control"
-                                  placeholder="Person In-Charge Tel No." name="persontel" value="" readonly>
-
-                              </div>
-                            </div><br>
-
-
-                            <div class="row">
-                              <div class="col-sm-12">
-                                <div class="container">
-                                  <input type="submit" class="btn btn-info " value="Save Changes">
-                                </div>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">BUSINESS INFORMATION</a>
+                      </h4>
                     </div>
-
-
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <h4 class="panel-title">
-                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">BUSINESS INFORMATION</a>
-                        </h4>
+                    <div id="collapse2" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                      
+                        <div class="row">
+                          <div class="col-sm-3">
+                              <h6 class="mb-0"><i class="fa fa-at"></i> &nbsp; Business Name
+                              </h6>
+                          </div>
+                          <div class="col-sm-9 text-secondary">
+                              <input type="text" class="form-control"
+                                  placeholder="Enter Business Name"
+                                  name="businessname" value="" readonly>
+                          </div>
                       </div>
-                      <div id="collapse2" class="panel-collapse collapse">
-                        <div class="panel-body">
-                          <form>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Business Category</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input class="form-control" style="border:none" list="catOptions" onfocus=this.value=''
-                                  id="category" name="category" required value="" placeholder="Please Choose" readonly>
-                                <datalist id="catOptions">
-                                  <option value="Telecommunication Equipment (Substation)">
-                                  <option value="ATM">
-                                  <option value="Laundry">
-                                  <option value="Shop">
-                                  <option value="UPC">
-                                  <option value="Vending Machine">
-                                </datalist>
-                              </div>
-                            </div><br>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Business Zone</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input class="form-control" style="border:none" list="zoneOptions" onfocus=this.value=''
-                                  id="zone" name="zone" required value="" placeholder="Please Choose" readonly>
-                                <datalist id="zoneOptions">
-                                  <option value="Accommodation">
-                                  <option value="Administrative">
-
-                                </datalist>
-                              </div>
-                            </div><br>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Premise Location</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input type="text" style="border:none" class="form-control"
-                                  placeholder="Premise Location" name="location" value="" readonly>
-
-                              </div>
-                            </div><br>
-                            <div class="row">
-                              <div class='col-sm-3'>
-                                <h6 class="mb-0">Contract Date</h6>
-                              </div>
-                              <div class="col-sm-4 text-secondary">
-                                <div class="form-group">
-                                  <div class='input-group date' id='datetimepicker1'>
-                                    <input type='text' class="form-control" name="startdate" />
-                                    <span class="input-group-addon">
-                                      <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
+                      <hr>
+                             
+                              <div class="row">
+                                  <div class="col-sm-3">
+                                      <h6 class="mb-0"><i class="bx bx-grid-alt"></i> &nbsp; Business
+                                          Category
+                                      </h6>
                                   </div>
-                                </div>
+                                  <div class="col-sm-9 text-secondary">
+                                      <input class="form-control" list="businessOptions"
+                                          onfocus=this.value='' id="business" name="business" 
+                                          value="" placeholder="Please Choose" readonly>
+                                      <datalist id="businessOptions">
 
-                              </div>
-                              <div class='col-sm-1'>
-                                <h6 class="mb-0">to</h6>
-                              </div>
-                              <div class="col-sm-4 text-secondary">
-                                <div class="form-group">
-
-                                  <div class='input-group date' id='datetimepicker2'>
-                                    <input type='text' class="form-control" name="enddate" />
-                                    <span class="input-group-addon">
-                                      <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
+                                          <option value="ATM">
+                                          <option value="Laundry">
+                                          <option value="Shop">
+                                          <option value="Telecommunication Equipment (Substation)">
+                                          <option value="UPC">
+                                          <option value="Vending Machine">
+                                      </datalist>
                                   </div>
-                                </div>
-                              </div>
-                            </div>
 
-                            <div class="row">
-                              <div class="col-sm-12">
-                                <div class="container">
-                                  <input type="submit" class="btn btn-info " value="Save Changes">
-                                </div>
                               </div>
-                            </div>
-                            <hr>
-                            <i class="fa fa-plus-circle"> <a href="#exampleModalCenter" data-toggle="modal" style="font-size:12px"> Add New Business</i></a>
-                           
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h3 class="modal-title" id="exampleModalCenterTitle">Add Business Information</h3>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
+                              <hr>
+                              <div class="row">
+                                  <div class="col-sm-3">
+                                      <h6 class="mb-0"><i class="fa fa-map-pin"></i> &nbsp; Premise
+                                          Location @ Address
+                                      </h6>
                                   </div>
-                                  <form>
-                                  <div class="modal-body">
-                                    
-                                      <div class="card mb-3">
-                                          <div class="card-body">
-                                             
-                                              <div class="row">
-                                                  <div class="col-sm-3">
-                                                      <h6 class="mb-0"><i class="bx bx-grid-alt"></i> &nbsp; Business
-                                                          Category
-                                                      </h6>
-                                                  </div>
-                                                  <div class="col-sm-9 text-secondary">
-                                                      <input class="form-control" list="businessOptions"
-                                                          onfocus=this.value='' id="business" name="business" required
-                                                          value="" placeholder="Please Choose" required>
-                                                      <datalist id="businessOptions">
-  
-                                                          <option value="ATM">
-                                                          <option value="Laundry">
-                                                          <option value="Shop">
-                                                          <option value="Telecommunication Equipment (Substation)">
-                                                          <option value="UPC">
-                                                          <option value="Vending Machine">
-                                                      </datalist>
-                                                  </div>
-  
-                                              </div>
-                                              <hr>
-                                              <div class="row">
-                                                  <div class="col-sm-3">
-                                                      <h6 class="mb-0"><i class="fa fa-map-pin"></i> &nbsp; Premise
-                                                          Location @ Address
-                                                      </h6>
-                                                  </div>
-                                                  <div class="col-sm-9 text-secondary">
-                                                      <input type="text" class="form-control"
-                                                          placeholder="Enter Premise Location @ Address"
-                                                          name="businesslocation" value="" required>
-                                                  </div>
-                                              </div>
-                                              <hr>
-                                              <div class="row">
-                                                  <div class="col-sm-3">
-                                                      <h6 class="mb-0"><i class="fa fa-building"></i> &nbsp;Business Zone
-                                                      </h6>
-                                                  </div>
-                                                  <div class="col-sm-9 text-secondary">
-                                                      <input class="form-control" list="zoneOptions" onfocus=this.value=''
-                                                          id="zone" name="zone" required value=""
-                                                          placeholder="Please Choose" required>
-                                                      <datalist id="zoneOptions">
-                                                          <option value="Accommodation">
-                                                          <option value="Administrative">
-  
-                                                      </datalist>
-                                                  </div>
-                                              </div>
-                                              <hr>
-                                              <div class="row">
-                                                  <div class="col-sm-3">
-                                                      <h6 class="mb-0"><i class="fa fa-calendar"></i> &nbsp;Contract Date
-                                                      </h6>
-                                                  </div>
-                                                  <div class="col-sm-4 text-secondary">
-  
-                                                      <div class="form-group">
-                                                          <div class='input-group date' id='datetimepicker3'>
-                                                              <input type='text' class="form-control" name="startdate" />
-                                                              <span class="input-group-addon">
-                                                                  <span class="glyphicon glyphicon-calendar"></span>
-                                                              </span>
-                                                          </div>
-                                                      </div>
-  
-                                                  </div>
-                                                  <div class='col-sm-1'>
-                                                      <h6 class="mb-0">to</h6>
-                                                  </div>
-                                                  <div class="col-sm-4 text-secondary">
-                                                      <div class="form-group">
-  
-                                                          <div class='input-group date' id='datetimepicker4'>
-                                                              <input type='text' class="form-control" name="enddate" />
-                                                              <span class="input-group-addon">
-                                                                  <span class="glyphicon glyphicon-calendar"></span>
-                                                              </span>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                              </div>
-  
-                                           
+                                  <div class="col-sm-9 text-secondary">
+                                      <input type="text" class="form-control"
+                                          placeholder="Enter Premise Location @ Address"
+                                          name="businesslocation" value="" readonly>
+                                  </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                  <div class="col-sm-3">
+                                      <h6 class="mb-0"><i class="fa fa-building"></i> &nbsp;Business Zone
+                                      </h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                      <input class="form-control" list="zoneOptions" onfocus=this.value=''
+                                          id="zone" name="zone" required value=""
+                                          placeholder="Please Choose" readonly>
+                                      <datalist id="zoneOptions">
+                                          <option value="Accommodation">
+                                          <option value="Administrative">
+
+                                      </datalist>
+                                  </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                  <div class="col-sm-3">
+                                      <h6 class="mb-0"><i class="fa fa-calendar"></i> &nbsp;Contract Date
+                                      </h6>
+                                  </div>
+                                  <div class="col-sm-4 text-secondary">
+
+                                      <div class="form-group">
+                                          <div class='input-group date' id='datetimepicker1'>
+                                              <input type='text' class="form-control" name="startdate" readonly/>
+                                              <span class="input-group-addon">
+                                                  <span class="glyphicon glyphicon-calendar"></span>
+                                              </span>
                                           </div>
                                       </div>
-                                  
-                                  </div>
-                                  
-                                  <div class="modal-footer">
-                                    <input type="submit" class="btn btn-success">
-                                  </div>
-                                </form>
-                                </div>
-                              </div>
-                            </div>
-                          </form>
 
-                        </div>
+                                  </div>
+                                  <div class='col-sm-1'>
+                                      <h6 class="mb-0">to</h6>
+                                  </div>
+                                  <div class="col-sm-4 text-secondary">
+                                      <div class="form-group">
+
+                                          <div class='input-group date' id='datetimepicker2'>
+                                              <input type='text' class="form-control" name="enddate" readonly/>
+                                              <span class="input-group-addon">
+                                                  <span class="glyphicon glyphicon-calendar"></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                           
+                         
+                      <br>
+
+                        
+    
+                         
+                        
+                       
+
                       </div>
                     </div>
-
-                    <div class="panel panel-default">
+                  </div>
+                  <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
                           <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">EMPLOYEE INFORMATION</a>
@@ -396,46 +241,44 @@
                       </div>
                       <div id="collapse3" class="panel-collapse collapse">
                         <div class="panel-body">
-                          <form>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Name</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input type="text" style="border:none" class="form-control" placeholder="Enter name"
-                                  name="empname" value="" readonly>
-                              </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Email</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input type="text" style="border:none" class="form-control" placeholder="Enter Email (eg. abc@example.com)"
-                                  name="empemail" value="joe@gmail.com" readonly>
-                              </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Contact Number</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input type="text" style="border:none" class="form-control" placeholder="Contact Number"
-                                  name="empcontact" value="" readonly>
-                              </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <h6 class="mb-0">Working Location</h6>
-                              </div>
-                              <div class="col-sm-9 text-secondary">
-                                <input type="text" style="border:none" class="form-control"
-                                  placeholder="Working Location" name="emplocation" value="" readonly>
-                              </div>
-                            </div>
+                          <div class="text" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbspSummarized Employee Details</div>
+                          <div class="sales-boxes3">
+                            
+                                <div class="sales-details">
+                                    <ul class="details">
+                                      <li class="topic">Employee ID</li>
+                                      <li><a href="#">EMP0001</a></li>
+                                      <li><a href="#">EMP0002</a></li>
+                                      <li><a href="#">EMP0003</a></li>
+                                      
+                                    </ul>
+                                    <ul class="details">
+                                    <li class="topic">Name</li>
+                                    <li><a href="#">Anthony Ng</a></li>
+                                    <li><a href="#">Sara Tee</a></li>
+                                    <li><a href="#">Lily Tan</a></li>
+                                  
+                                  </ul>
+                                  <ul class="details">
+                                    <li class="topic">Contact Number</li>
+                                    <li><a href="#">0123455678</a></li>
+                                    <li><a href="#">0198989768</a></li>
+                                    <li><a href="#">0190987897</a></li>
+                                 
+                                  </ul>
+                                  <ul class="details">
+                                    <li class="topic">Working Location</li>
+                                    <li><a href="#">V Mart</a></li>
+                                    <li><a href="#">Kachi Mart</a></li>
+                                    <li><a href="#">V Express</a></li>
+                                
+                                  </ul>
+                                
+                                  </div>
+                                 
+                           
+                           
+                          </div>
 
                             <hr>
                             <i class="fa fa-plus-circle"> <a href="#exampleModalCenter1" data-toggle="modal" style="font-size:12px"> Add New Employee</i></a>
@@ -545,12 +388,11 @@
                               </div>
                             </div>
 
+</div>
+                </div>
+              </div>
 
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            </div>
                 </div>
 
               </div>

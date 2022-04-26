@@ -12,11 +12,13 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/addform.css">
      <!-- table -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
      <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="../js/addform.js"></script>
    
     <script>
         $(document).ready(function () {
@@ -135,9 +137,112 @@
                                 onClick="generatePDF()">
                                 <i class="fa fa-file-pdf-o"></i> Generate PDF
                                 <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;"
-                                onClick="">
+                                data-target="#addbo" data-toggle="modal">
                                 <i class="fa fa-plus"></i> Add New Business Operator
                             </button>
+                             <!-- Modal -->
+                             <div class="modal fade" id="addbo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                       
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                      </button>
+                                    </div>
+                                    
+                                    <div class="modal-body">
+                                        <section>
+                                            <div class="sales-boxes">
+                            
+                                                <div class="row justify-content-center">
+                            
+                                                    <div class="card">
+                                                        <h2 id="heading">Create New Operator Account</h2>
+                                                        <p>Fill all form field to go to next step</p>
+                                                        <form id="msform" action="../html/loginaccount.php" method="POST">
+                                                            <!-- progressbar -->
+                                                            <ul id="progressbar">
+                                                                <li class="active" id="personal"><strong>Personal</strong></li>
+                                                                <li id="account"><strong>Company</strong></li>
+                                                                <li id="confirm"><strong>Finish</strong></li>
+                                                            </ul>
+                            
+                                                            <fieldset>
+                                                                <div class="form-card">
+                                                                    <div class="row">
+                                                                        <div class="col-7">
+                                                                            <h2 class="fs-title">Business Operator Information:</h2>
+                                                                        </div>
+                                                                        <div class="col-5">
+                                                                            <h2 class="steps">Step 1 - 3</h2>
+                                                                        </div>
+                                                                    </div>
+                                                                    <label class="fieldlabels">Name: *</label> <input type="text" id="username" name="name" placeholder="Name" required/>
+                                                                    <label class="fieldlabels">Email: *</label> <input type="email" id="email" name="email" placeholder="Email (eg. abc@example.com)" required/>
+                                                                    <label class="fieldlabels">Contact No.: *</label> <input type="tel" id="phone" name="phone" placeholder="Contact No. (eg. +60123456789)" pattern="^(\+?6?01)[0-46-9]-*[0-9]{7,8}$" required />
+                            
+                                                                </div> <input type="button" name="next" class="next action-button" value="Next" />
+                                                            </fieldset>
+                                                            <fieldset>
+                                                                <div class="form-card">
+                                                                    <div class="row">
+                                                                        <div class="col-7">
+                                                                            <h2 class="fs-title">Company Information:</h2>
+                                                                        </div>
+                                                                        <div class="col-5">
+                                                                            <h2 class="steps">Step 2 - 3</h2>
+                                                                        </div>
+                                                                    </div>
+                                                                    <label class="fieldlabels">Company Name: *</label> <input type="text" id="compname" name="compname" placeholder="Company Name" />
+                                                                    <label class="fieldlabels">Company Address: *</label> <input type="text" id="compaddress" name="compaddress" placeholder="Company Address" />
+                                                                    <label class="fieldlabels">Company Tel No.: *</label> <input type="text" id="companytel" name="companytel" placeholder="Tel No. (eg. 04-7865890)." />
+                                                                    <label class="fieldlabels">Name of Person In-Charge: *</label> <input type="text" id="personname" name="personname" placeholder="Name of Person In-Charge" />
+                                                                    <label class="fieldlabels">Position: *</label> <input type="text" id="position" name="position" placeholder="Position (eg. Manager)" />
+                                                                    <label class="fieldlabels">Person In-Charge Tel No.: *</label> <input type="tel" id="personaltel" name="personaltel" placeholder="Tel No. (eg. +60123456789) " pattern="^(\+?6?01)[0-46-9]-*[0-9]{7,8}$" />
+                                                                </div> <input type="button" name="submit" class="submit action-button" value="Submit" />
+                                                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                                            </fieldset>
+                                                            <fieldset>
+                                                                <div class="form-card2">
+                                                                    <div class="row">
+                                                                        <div class="col-7">
+                                                                            <h2 class="fs-title">Finish:</h2>
+                                                                        </div>
+                                                                        <div class="col-5">
+                                                                            <h2 class="steps">Step 3 - 3</h2>
+                                                                        </div>
+                                                                    </div> <br><br>
+                                                                    <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-4"> <img src="https://i.imgur.com/GwStPmg.png" height="80px" width="80px" text-align="center"> </div>
+                                                                    </div> <br><br>
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-7 text-center">
+                                                                            <h4 class="purple-text text-center">The operator is added successfully.</h4>
+                                                                            <h5 class="purple-text text-center"><a href="admindashboard.html">Back to dashboard</a></h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                            
+                                                </div>
+                            
+                            
+                            
+                            
+                                            </div>
+                                        </section>
+                                   
+                                    
+                                    </div>
+                                
+                                  </form>
+                                  </div>
+                                </div>
+                              </div>
                     </div>
                 </div>
             </section><br><br>
@@ -159,7 +264,7 @@
                                         <th>Gender</th>
                                         <th>Nationality</th>
                                         <th>Contact No.</th>
-                                        <th>Working Location</th>
+                                       <th>Email</th>
                                         <th>Action</th>
 
 
@@ -168,15 +273,118 @@
                                 <tbody>
 
                                     <tr>
-                                        <td>EMP1023</td>
+                                        <td>BO1023</td>
                                         <td>Sara Tee</td>
                                         <td>Female</td>
                                         <td>Malaysian</td>
                                         <td>0127898787</td>
-                                        <td>Kachi Mart</td>
+                                        <td>sara@gmail.com</td>
                                         <td>
-                                            <!-- <button class="btn btn-warning" style="width:40px;height:40px; border-radius:50%"  name="check" onclick="check()"><i class="fa fa-eye"></i></button> -->
-                                            <button class="btn btn-success" style="width:38px;height:38px; border-radius:50%"  name="check" onclick="check()"><i class="fa fa-edit"></i></button>
+                                            <button class="btn btn-warning" style="width:40px;height:40px; border-radius:50%"  name="check" onclick="window.location.href='operatordetails.html'"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-success" style="width:38px;height:38px; border-radius:50%"  name="check" data-target="#editbo" data-toggle="modal"><i class="fa fa-edit"></i></button>
+                                             <!-- Modal -->
+                            <div class="modal fade" id="editbo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h3 class="modal-title" id="exampleModalCenterTitle">Edit Business Operator Information</h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                      </button>
+                                    </div>
+                                    <form>
+                                    <div class="modal-body">
+                                      
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                               
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <h6 class="mb-0"><i class="fa fa-user"></i> &nbsp; Name
+                                                        </h6>
+                                                    </div>
+                                                    <div class="col-sm-9 text-secondary">
+                                                      <input type="text" class="form-control"
+                                                      placeholder="Enter Operator Name"
+                                                      name="boname" value="" readonly>
+                                                    </div>
+    
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <h6 class="mb-0"><i class="fa fa-venus-mars"></i> &nbsp; Gender
+                                                        </h6>
+                                                    </div>
+                                                    <div class="col-sm-9 text-secondary">
+                                                      <input class="form-control" list="genderOptions" onfocus=this.value=''
+                                                      id="gender" name="gender" required value=""
+                                                      placeholder="Please Choose" readonly>
+                                                  <datalist id="genderOptions">
+                                                      <option value="Male">
+                                                      <option value="Female">
+  
+                                                  </datalist>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <h6 class="mb-0"><i class="fa fa-flag"></i> &nbsp;Nationality
+                                                        </h6>
+                                                    </div>
+                                                    <div class="col-sm-9 text-secondary">
+                                                        <input class="form-control" list="nationOptions" onfocus=this.value=''
+                                                            id="nationality" name="nationality" required value=""
+                                                            placeholder="Please Choose" readonly>
+                                                        <datalist id="nationOptions">
+                                                            <option value="Malaysian">
+                                                            <option value="Non-Malaysian">
+    
+                                                        </datalist>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                  <div class="col-sm-3">
+                                                      <h6 class="mb-0"><i class="fa fa-phone"></i> &nbsp; Contact Number
+                                                      </h6>
+                                                  </div>
+                                                  <div class="col-sm-9 text-secondary">
+                                                    <input type="text" class="form-control"
+                                                    placeholder="Enter Contact Number (eg. 0187878678)"
+                                                    name="bophone" value="" required>
+                                                  </div>
+  
+                                              </div>
+                                              <hr>
+                                              <div class="row">
+                                                <div class="col-sm-3">
+                                                    <h6 class="mb-0"><i class="fa fa-envelope"></i> &nbsp; Email
+                                                    </h6>
+                                                </div>
+                                                <div class="col-sm-9 text-secondary">
+                                                  <input type="text" class="form-control"
+                                                  placeholder="Enter Email (eg.abc@example.com)"
+                                                  name="boemail" value="" required>
+                                                </div>
+  
+                                            </div>
+                                            
+                                             
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                        
+                                      <input type="submit" class="btn btn-info" value="Save Changes">
+                                    </div>
+                                  </form>
+                                  </div>
+                                </div>
+                              </div>
                                             <button class="btn btn-danger" style="width:38px;height:38px; border-radius:50%"  name="uncheck" onclick="uncheck()"><i class="fa fa-trash"></i></td>
                                     </tr>
                                 </tbody>

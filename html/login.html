@@ -68,10 +68,12 @@
                                 <p>
                                     <div class="form-icon">
                                         <img src="../images/media/business.png" width="280" height="150"></p>
-                                <span class="signup">Don't have account?<a href="register.php">
+                                <span class="signup">Don't have account?<a href="register.html">
                                             Signup</a></span>
                                 </div>
-                                <form class="form-horizontal" name="loginform" action="../html/loginaccount.php" onSubmit="return loginformValidation();" method="POST">
+                                <form class="form-horizontal" name="loginform"
+                                action="../html/loginaccount.php" 
+                                onSubmit="return loginformValidation();" method="POST">
 
                                     <div class="form-icon1">
                                         <img src="../images/media/businesslogo.png" width="120" height="120">
@@ -102,7 +104,7 @@
                                     </div>
 
 
-                                    <button class="btn-signin" type="submit">Login</button>
+                                    <button class="btn-signin" type="button" onclick="window.location.href='admindashboard.html'">login your account</button>
                                     <span class="forgot-pass"><a href="forgetpassword.html">Forgot
                                             Username/Password?</a></span>
                                 </form>

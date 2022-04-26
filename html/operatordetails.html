@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/profile.css">
+  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'> -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <!-- table -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/daterangepicker.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+ 
+
+  <title>UUMBIZ</title>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-buildings'></i>
+      <span class="logo_name">UUMBIZ</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="admindashboard.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="admincompany.html" >
+          <i class='bx bx-building'></i>
+          <span class="links_name">Company</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminbusiness.html">
+          <i class='bx bx-list-ul'></i>
+          <span class="links_name">Business</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminemployee.html" class="active">
+          <i class='bx bx-user-circle'></i>
+          <span class="links_name">Business Operator</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminrent.html">
+          <i class='bx bx-bell'></i>
+          <span class="links_name">Rent Reminder</span>
+        </a>
+      </li>
+      <li>
+        <a href="admincontract.html">
+          <i class='bx bx-book-alt'></i>
+          <span class="links_name">Contract Reminder</span>
+        </a>
+      </li>
+      <li>
+        <a href="adminr&c.html">
+          <i class='bx bx-comment-dots'></i>
+          <span class="links_name">Report & Complaint</span>
+        </a>
+      </li>
+
+      <li class="log_out">
+        <a href="#">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard"> <img src="../images/media/saclogo.png" height="88"></span>
+      </div>
+
+      <div class="dropdown">
+        <button class="profile-details dropdown-toggle" type="button" data-toggle="dropdown">
+
+          <img src="../images/media/user.png" id="avatar" alt="">
+          <span class="admin_name">Prem Shahi</span>
+          <i class='bx bx-chevron-down'></i></button>
+        <ul class="dropdown-menu pull-right">
+          <li><a href="profile.html">Manage Profile</a></li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <section>
+        <div class="sales-boxes">
+
+          <div class="main-body">
+            <div class="row gutters-sm">
+              <div class="col-12">
+                <div class="card-body1">
+                  <div class="panel-group" id="accordion">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">OPERATOR INFORMATION</a>
+                          </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                          <div class="panel-body">
+                            <form>
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0"> Operator Name</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  <input type="text" style="border:none" class="form-control"
+                                    placeholder="Enter Operator Name" name="boname" value="" readonly>
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  <input type="text" style="border:none" class="form-control"
+                                    placeholder="Enter Email" name="boemail" value="" readonly>
+                                </div>
+                              </div>
+                              <hr>
+                             
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Contact No.</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  <input type="tel" style="border:none" class="form-control"
+                                    placeholder="Enter Contact Number" name="botel" value="" readonly>
+  
+                                </div>
+                              </div><br>
+  
+  
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">COMPANY INFORMATION</a>
+                        </h4>
+                      </div>
+                      <div id="collapse2" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                          <form>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Company Name</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                <input type="text" style="border:none" class="form-control"
+                                  placeholder="Company Name" name="comname" value="" readonly>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Company Address</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                <input type="text" style="border:none" class="form-control"
+                                  placeholder="Company Address" name="comaddress" value="" readonly>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Name of Person In-Charge</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                <input type="text" style="border:none" class="form-control"
+                                  placeholder="Name of Person In-Charge" name="personname" value="" readonly>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Company Tel No.</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                <input type="tel" style="border:none" class="form-control" placeholder="Company Tel No."
+                                  name="companytel" value="" readonly>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <h6 class="mb-0">Person In-Charge Tel No.</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                                <input type="tel" style="border:none" class="form-control"
+                                  placeholder="Person In-Charge Tel No." name="persontel" value="" readonly>
+
+                              </div>
+                            </div><br>
+
+
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">BUSINESS INFORMATION</a>
+                        </h4>
+                      </div>
+                      <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="text" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbspSummarized Business Details</div>
+                            <div class="sales-boxes3">
+                              
+                                  <div class="sales-details">
+                                      <ul class="details">
+                                        <li class="topic">Business ID</li>
+                                        <li><a href="#">BB0001</a></li>
+                                        <li><a href="#">BB0002</a></li>
+                                        <li><a href="#">BB0003</a></li>
+                                        
+                                      </ul>
+                                      <ul class="details">
+                                        <li class="topic">Name</li>
+                                        <li><a href="#">Pane Bakery</a></li>
+                                        <li><a href="#">Aris</a></li>
+                                        <li><a href="#">Eco Color</a></li>
+                                        
+                                      </ul>
+                                      <ul class="details">
+                                      <li class="topic">Business Category</li>
+                                      <li><a href="#">ATM</a></li>
+                                      <li><a href="#">ATM</a></li>
+                                      <li><a href="#">Vending Machine</a></li>
+                                    
+                                    </ul>
+                                    <ul class="details">
+                                      <li class="topic">Business Zone</li>
+                                      <li><a href="#">Accommodation</a></li>
+                                      <li><a href="#">Accommodation</a></li>
+                                      <li><a href="#">Administrative</a></li>
+                                   
+                                    </ul>
+                                    <ul class="details">
+                                      <li class="topic">Contract Start Date</li>
+                                      <li><a href="#">01/01/2021</a></li>
+                                      <li><a href="#">01/02/2021</a></li>
+                                      <li><a href="#">01/03/2021</a></li>
+                                  
+                                    </ul>
+                                    <ul class="details">
+                                        <li class="topic">Contract End Date</li>
+                                        <li><a href="#">01/01/2023</a></li>
+                                        <li><a href="#">01/02/2023</a></li>
+                                        <li><a href="#">01/03/2023</a></li>
+                                    
+                                      </ul>
+                                    </div>
+                                   
+                             
+                             
+                            </div><br>
+
+                         <hr>   
+                            <i class="fa fa-plus-circle"> <a href="#exampleModalCenter" data-toggle="modal" style="font-size:12px"> Add New Business</i></a>
+                           
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h3 class="modal-title" id="exampleModalCenterTitle">Add Business Information</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">×</span>
+                                    </button>
+                                  </div>
+                                  <form>
+                                  <div class="modal-body">
+                                    
+                                      <div class="card mb-3">
+                                          <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <h6 class="mb-0"><i class="fa fa-at"></i> &nbsp; Business Name
+                                                    </h6>
+                                                </div>
+                                                <div class="col-sm-9 text-secondary">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Enter Business Name"
+                                                        name="businessname" value="" required>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                              <div class="row">
+                                                  <div class="col-sm-3">
+                                                      <h6 class="mb-0"><i class="bx bx-grid-alt"></i> &nbsp; Business
+                                                          Category
+                                                      </h6>
+                                                  </div>
+                                                  <div class="col-sm-9 text-secondary">
+                                                      <input class="form-control" list="businessOptions"
+                                                          onfocus=this.value='' id="business" name="business" required
+                                                          value="" placeholder="Please Choose" required>
+                                                      <datalist id="businessOptions">
+  
+                                                          <option value="ATM">
+                                                          <option value="Laundry">
+                                                          <option value="Shop">
+                                                          <option value="Telecommunication Equipment (Substation)">
+                                                          <option value="UPC">
+                                                          <option value="Vending Machine">
+                                                      </datalist>
+                                                  </div>
+  
+                                              </div>
+                                              <hr>
+                                              <div class="row">
+                                                  <div class="col-sm-3">
+                                                      <h6 class="mb-0"><i class="fa fa-map-pin"></i> &nbsp; Premise
+                                                          Location @ Address
+                                                      </h6>
+                                                  </div>
+                                                  <div class="col-sm-9 text-secondary">
+                                                      <input type="text" class="form-control"
+                                                          placeholder="Enter Premise Location @ Address"
+                                                          name="businesslocation" value="" required>
+                                                  </div>
+                                              </div>
+                                              <hr>
+                                              <div class="row">
+                                                  <div class="col-sm-3">
+                                                      <h6 class="mb-0"><i class="fa fa-building"></i> &nbsp;Business Zone
+                                                      </h6>
+                                                  </div>
+                                                  <div class="col-sm-9 text-secondary">
+                                                      <input class="form-control" list="zoneOptions" onfocus=this.value=''
+                                                          id="zone" name="zone" required value=""
+                                                          placeholder="Please Choose" required>
+                                                      <datalist id="zoneOptions">
+                                                          <option value="Accommodation">
+                                                          <option value="Administrative">
+  
+                                                      </datalist>
+                                                  </div>
+                                              </div>
+                                              <hr>
+                                              <div class="row">
+                                                  <div class="col-sm-3">
+                                                      <h6 class="mb-0"><i class="fa fa-calendar"></i> &nbsp;Contract Date
+                                                      </h6>
+                                                  </div>
+                                                  <div class="col-sm-4 text-secondary">
+  
+                                                      <div class="form-group">
+                                                          <div class='input-group date' id='datetimepicker3'>
+                                                              <input type='text' class="form-control" name="startdate" />
+                                                              <span class="input-group-addon">
+                                                                  <span class="glyphicon glyphicon-calendar"></span>
+                                                              </span>
+                                                          </div>
+                                                      </div>
+  
+                                                  </div>
+                                                  <div class='col-sm-1'>
+                                                      <h6 class="mb-0">to</h6>
+                                                  </div>
+                                                  <div class="col-sm-4 text-secondary">
+                                                      <div class="form-group">
+  
+                                                          <div class='input-group date' id='datetimepicker4'>
+                                                              <input type='text' class="form-control" name="enddate" />
+                                                              <span class="input-group-addon">
+                                                                  <span class="glyphicon glyphicon-calendar"></span>
+                                                              </span>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+  
+                                           
+                                          </div>
+                                      </div>
+                                  
+                                  </div>
+                                  
+                                  <div class="modal-footer">
+                                    <input type="submit" class="btn btn-success">
+                                  </div>
+                                </form>
+                                </div>
+                              </div>
+                            </div>
+                         
+
+                        </div>
+                      </div>
+                    </div>
+                  
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4 m-b-30">
+                <div class="footer-title m-t-5 m-b-20 p-b-8">
+                  About us
+                </div>
+                <p class="white-text">
+                <p><b>STUDENT ACCOMMODATION CENTRE</b></p>
+                <p><b>Student Affairs Department Universiti</b></p>
+                <p><b>Utara Malaysia</b></p>
+                <p>06010 Sintok</p>
+                <p>Kedah Darul Aman, Malaysia</p><br>
+                <i class="fa fa-phone-square"></i> +604-928 4150 &nbsp;&nbsp <i class="fa fa-fax"></i>
+                +604-928 4175<br>
+                <i class="	fa fa-envelope-o"></i> sac@uum.edu.my
+                </p>
+              </div>
+
+              <div class="col-md-4 m-b-30">
+                <div class="footer-title m-t-5 m-b-20 p-b-8">
+                  Quick Links
+                </div>
+                <div class="footer-links">
+                  <a href="http://www.uum.edu.my/getting-to-uum.html">
+                    Getting to UUM
+                  </a>
+                  <a href="http://uum.edu.my/360/">
+                    Virtual Tour
+                  </a>
+                  <a href="http://www.uum.edu.my/index.php/main-contact">
+                    Contact Us
+                  </a>
+
+                </div>
+              </div>
+              <div class="col-md-4 m-b-30">
+                <div class="footer-title m-t-5 m-b-20 p-b-8">
+                  Locate Us
+                </div>
+                <div class="footer-links">
+                  <a
+                    href="https://www.openstreetmap.org/search?whereami=1&query=6.4635%2C100.5055#map=14/6.4635/100.5055&layers=N">
+                    <img src="../images/media/uummap.PNG" width="320" height="210">
+                  </a>
+
+                </div>
+                <div class="footer-social-links m-t-30">
+                  <li>
+                    <a href="https://www.facebook.com/universitiutaramalaysia/">
+                      <i class="fa fa-facebook" aria-hidden="true"> </i> </a>
+
+                    <a href="https://www.youtube.com/user/uumtube"> <i class="fa fa-youtube" aria-hidden="true"> </i>
+                    </a>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div class="footer-bottom">
+          <strong>Copyright &copy; 2022 <b>Universiti Utara Malaysia</b>.</strong> All rights reserved.
+
+        </div>
+      </div>
+
+  </section>
+
+  
+
+
+  
+
+
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function () {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+        sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+  </script>
+  <script>
+    
+    $(function () {
+      $('#datetimepicker3').datetimepicker(
+        {
+          format: 'YYYY-MM-DD'
+        }
+      );
+    });
+    $(function () {
+      $('#datetimepicker4').datetimepicker(
+        {
+          format: 'YYYY-MM-DD'
+        }
+      );
+    });
+  </script>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'>
+  </script>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
+    </script> -->
+  <script src='https://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
+  </script>
+  <!-- calendar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+
+</body>
+
+</html>
