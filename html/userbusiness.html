@@ -111,9 +111,9 @@
             <section>
                 <div class="sales-boxes" >
                     <div class="col-xs-13">
-                       
+                      
                                 <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;"
-                                onClick="">
+                                onClick="window.location.href='useraddbusiness.html'">
                                 <i class="fa fa-plus"></i> Add New Business
                             </button>
                     </div>
@@ -153,7 +153,123 @@
                                         <td>Dobi</td>
                                         <td>Accommodation</td>
                                         <td>
-                                            <button class="btn btn-success" style="width:38px;height:38px; border-radius:50%"  name="check" onclick="check()"><i class="fa fa-edit"></i></button>
+                                            <button class="btn btn-success" style="width:38px;height:38px; border-radius:50%"  name="check" data-target="#editbusiness" data-toggle="modal"><i class="fa fa-edit"></i></button>
+                                             <!-- Modal -->
+                            <div class="modal fade" id="editbusiness" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h3 class="modal-title" id="exampleModalCenterTitle">Add Business Information</h3>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                      </button>
+                                    </div>
+                                    <form>
+                                        <div class="modal-body">
+                                    
+                                            <div class="card mb-3">
+                                                <div class="card-body">
+                                                   
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <h6 class="mb-0"><i class="bx bx-grid-alt"></i> &nbsp; Business
+                                                                Category
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-sm-9 text-secondary">
+                                                            <input class="form-control" list="businessOptions"
+                                                                onfocus=this.value='' id="business" name="business" required
+                                                                value="" placeholder="Please Choose" required>
+                                                            <datalist id="businessOptions">
+        
+                                                                <option value="ATM">
+                                                                <option value="Laundry">
+                                                                <option value="Shop">
+                                                                <option value="Telecommunication Equipment (Substation)">
+                                                                <option value="UPC">
+                                                                <option value="Vending Machine">
+                                                            </datalist>
+                                                        </div>
+        
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <h6 class="mb-0"><i class="fa fa-map-pin"></i> &nbsp; Premise
+                                                                Location @ Address
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-sm-9 text-secondary">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Premise Location @ Address"
+                                                                name="businesslocation" value="" required>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <h6 class="mb-0"><i class="fa fa-building"></i> &nbsp;Business Zone
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-sm-9 text-secondary">
+                                                            <input class="form-control" list="zoneOptions" onfocus=this.value=''
+                                                                id="zone" name="zone" required value=""
+                                                                placeholder="Please Choose" required>
+                                                            <datalist id="zoneOptions">
+                                                                <option value="Accommodation">
+                                                                <option value="Administrative">
+        
+                                                            </datalist>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <h6 class="mb-0"><i class="fa fa-calendar"></i> &nbsp;Contract Date
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-sm-4 text-secondary">
+        
+                                                            <div class="form-group">
+                                                                <div class='input-group date' id='datetimepicker3'>
+                                                                    <input type='text' class="form-control" name="startdate" />
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+        
+                                                        </div>
+                                                        <div class='col-sm-1'>
+                                                            <h6 class="mb-0">to</h6>
+                                                        </div>
+                                                        <div class="col-sm-4 text-secondary">
+                                                            <div class="form-group">
+        
+                                                                <div class='input-group date' id='datetimepicker4'>
+                                                                    <input type='text' class="form-control" name="enddate" />
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+                                                 
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                    
+                                    <div class="modal-footer">
+                        
+                                      <input type="submit" class="btn btn-success">
+                                    </div>
+                                  </form>
+                                  </div>
+                                </div>
+                              </div>
                                             <button class="btn btn-danger" style="width:38px;height:38px; border-radius:50%"  name="uncheck" onclick="uncheck()"><i class="fa fa-trash"></i></td>
 
                                     </tr>
@@ -162,6 +278,7 @@
                                 </tbody>
 
                             </table>
+                           
                         </div><!-- /.box-body -->
 
                     </div><!-- /.box -->
