@@ -5,21 +5,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/footer.css">
     <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'> -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <!-- table -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
-     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- table -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-   
+
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#example').DataTable(
 
             );
@@ -35,13 +35,17 @@
             const element = document.getElementById('table', 'example');
             // Choose the element and save the PDF for our user.
             html2pdf()
-                .set({ html2canvas: { scale: 4 } })
+                .set({
+                    html2canvas: {
+                        scale: 4
+                    }
+                })
                 .from(element)
                 .save();
         }
     </script>
 
-<title>UUMBIZ</title>
+    <title>UUMBIZ</title>
 </head>
 
 <body>
@@ -52,19 +56,19 @@
         </div>
         <ul class="nav-links">
             <li>
-                <a href="admindashboard.html" >
+                <a href="admindashboard.html">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="admincompany.html" >
+                <a href="admincompany.html">
                     <i class='bx bx-building'></i>
                     <span class="links_name">Company</span>
                 </a>
             </li>
             <li>
-                <a href="adminbusiness.html" >
+                <a href="adminbusiness.html">
                     <i class='bx bx-list-ul'></i>
                     <span class="links_name">Business</span>
                 </a>
@@ -76,7 +80,7 @@
                 </a>
             </li>
             <li>
-                <a href="adminrent.html"class="active">
+                <a href="adminrent.html" class="active">
                     <i class='bx bx-bell'></i>
                     <span class="links_name">Rent Reminder</span>
                 </a>
@@ -93,7 +97,7 @@
                     <span class="links_name">Report & Complaint</span>
                 </a>
             </li>
-           
+
             <li class="log_out">
                 <a href="#">
                     <i class='bx bx-log-out'></i>
@@ -106,28 +110,28 @@
         <nav>
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn'></i>
-                <span class="dashboard" > <img src="../images/media/saclogo.png" height="88"></span>
+                <span class="dashboard"> <img src="../images/media/saclogo.png" height="88"></span>
             </div>
             <!-- <div class="search-box">
                 <input type="text" placeholder="Search...">
                 <i class='bx bx-search'></i>
             </div> -->
             <div class="dropdown">
-                <button class="profile-details dropdown-toggle" type="button" data-toggle="dropdown" >
-            
-                <img src="../images/media/user.png" id="avatar" alt="">
-                <span class="admin_name">Prem Shahi</span>
-                <i class='bx bx-chevron-down'></i></button>
+                <button class="profile-details dropdown-toggle" type="button" data-toggle="dropdown">
+
+                    <img src="../images/media/user.png" id="avatar" alt="">
+                    <span class="admin_name">Prem Shahi</span>
+                    <i class='bx bx-chevron-down'></i></button>
                 <ul class="dropdown-menu pull-right">
                     <li><a href="profile.html">Manage Profile</a></li>
-                  
-                  </ul>
+
+                </ul>
             </div>
         </nav>
 
         <div class="home-content">
             <section>
-                <div class="sales-boxes" >
+                <div class="sales-boxes">
                     <div class="col-xs-13">
                         <button type="button" class="btn btn-success pull-right" onClick="print()"><i
                                 class="fa fa-print"></i> Print
@@ -136,9 +140,9 @@
                                 onClick="generatePDF()">
                                 <i class="fa fa-file-pdf-o"></i> Generate PDF
                                 <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;"
-                                onClick="">
-                                <i class="fa fa-plus"></i> Add New Rent Reminder
-                            </button>
+                                    onClick="">
+                                    <i class="fa fa-plus"></i> Add New Rent Reminder
+                                </button>
                     </div>
                 </div>
             </section><br><br>
@@ -148,7 +152,7 @@
                     <div class="box" id="table">
                         <div class="box-header with-border">
                             <h3 class="box-title"><i class="fa fa-bell">&nbsp;&nbsp</i>Rent Reminder List</h3>
-                           
+
                         </div><br><br><br>
                         <div class="box-body">
 
@@ -175,23 +179,122 @@
                                         <td>20220330 18:00</td>
                                         <td>abc@example.com</td>
                                         <td>1 time</td>
-                                        <td><button class="btn btn-info" style="width:40px;height:40px; border-radius:50%"  name="check" onclick="check()"><i class="fa fa-send"></i></button>
+                                        <td><button class="btn btn-info" style="width:40px;height:40px; border-radius:50%" name="send" data-target="#sendrent" data-toggle="modal"><i
+                                                    class="fa fa-send"></i></button>
                                             <!-- <button class="btn btn-success" style="width:38px;height:38px; border-radius:50%"  name="check" onclick="check()"><i class="fa fa-edit"></i></button> -->
-                                            <button class="btn btn-danger" style="width:38px;height:38px; border-radius:50%"  name="uncheck" onclick="uncheck()"><i class="fa fa-trash"></i></td>
+                                            <button class="btn btn-danger" style="width:38px;height:38px; border-radius:50%" name="uncheck" onclick="uncheck()"><i class="fa fa-trash"></i>
+                                        </td>
 
                                     </tr>
 
-                               
+
                                 </tbody>
 
                             </table>
                         </div><!-- /.box-body -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="sendrent" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="exampleModalCenterTitle">Add Reminder Information
+                                        </h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                        </div>
+                        <form>
+                            <div class="modal-body">
 
-                    </div><!-- /.box -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0"><i class="fa fa-at"></i> &nbsp; Receiver Email
+                                                </h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="text" class="form-control" placeholder="Enter Receiver Email" name="emailreceiver" value="" required>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0"><i class="bx bx-grid-alt"></i> &nbsp; Title Reminder
+                                                </h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="text" class="form-control" placeholder="Enter Title Reminder" name="title" value="" required>
+
+                                            </div>
+
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0"><i class="fa fa-map-pin"></i> &nbsp; Description
+                                                </h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="text" class="form-control" placeholder="Enter Description Reminder" name="description" value="" required>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0"><i class="fa fa-map-pin"></i> &nbsp; Name of Rent
+                                                </h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="text" class="form-control" placeholder="Enter Name of Rent" name="renttype" value="" required>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0"><i class="fa fa-map-pin"></i> &nbsp; Total of Rent
+                                                </h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="text" class="form-control" placeholder="Enter Total of Rent" name="renttotal" value="" required>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <h6 class="mb-0"><i class="fa fa-map-pin"></i> &nbsp; Your full name
+                                                </h6>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="text" class="form-control" placeholder="Enter Your full name as on ID" name="sendername" value="" required>
+                                            </div>
+                                        </div>
+                                        <hr>
 
 
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <input type="submit" class="btn btn-success">
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </section>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- /.box -->
+
+
+        </div>
+        </section>
 
         </div>
 
@@ -207,14 +310,13 @@
                                     About us
                                 </div>
                                 <p class="white-text">
-                                <p><b>STUDENT ACCOMMODATION CENTRE</b></p>
-                                <p><b>Student Affairs Department Universiti</b></p>
-                                <p><b>Utara Malaysia</b></p>
-                                <p>06010 Sintok</p>
-                                <p>Kedah Darul Aman, Malaysia</p><br>
-                                <i class="fa fa-phone-square"></i> +604-928 4150 &nbsp;&nbsp <i class="fa fa-fax"></i>
-                                +604-928 4175<br>
-                                <i class="	fa fa-envelope-o"></i> sac@uum.edu.my
+                                    <p><b>STUDENT ACCOMMODATION CENTRE</b></p>
+                                    <p><b>Student Affairs Department Universiti</b></p>
+                                    <p><b>Utara Malaysia</b></p>
+                                    <p>06010 Sintok</p>
+                                    <p>Kedah Darul Aman, Malaysia</p><br>
+                                    <i class="fa fa-phone-square"></i> +604-928 4150 &nbsp;&nbsp <i class="fa fa-fax"></i> +604-928 4175<br>
+                                    <i class="	fa fa-envelope-o"></i> sac@uum.edu.my
                                 </p>
                             </div>
 
@@ -224,14 +326,14 @@
                                 </div>
                                 <div class="footer-links">
                                     <a href="http://www.uum.edu.my/getting-to-uum.html">
-                                        Getting to UUM
-                                    </a>
+                                    Getting to UUM
+                                </a>
                                     <a href="http://uum.edu.my/360/">
-                                        Virtual Tour
-                                    </a>
+                                    Virtual Tour
+                                </a>
                                     <a href="http://www.uum.edu.my/index.php/main-contact">
-                                        Contact Us
-                                    </a>
+                                    Contact Us
+                                </a>
 
                                 </div>
                             </div>
@@ -240,8 +342,7 @@
                                     Locate Us
                                 </div>
                                 <div class="footer-links">
-                                    <a
-                                        href="https://www.openstreetmap.org/search?whereami=1&query=6.4635%2C100.5055#map=14/6.4635/100.5055&layers=N">
+                                    <a href="https://www.openstreetmap.org/search?whereami=1&query=6.4635%2C100.5055#map=14/6.4635/100.5055&layers=N">
                                         <img src="../images/media/uummap.PNG" width="320" height="210">
                                     </a>
 
@@ -251,8 +352,7 @@
                                         <a href="https://www.facebook.com/universitiutaramalaysia/">
                                             <i class="fa fa-facebook" aria-hidden="true"> </i> </a>
 
-                                        <a href="https://www.youtube.com/user/uumtube"> <i class="fa fa-youtube"
-                                                aria-hidden="true"> </i> </a>
+                                        <a href="https://www.youtube.com/user/uumtube"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a>
                                     </li>
                                 </div>
                             </div>
@@ -271,7 +371,7 @@
     <script>
         let sidebar = document.querySelector(".sidebar");
         let sidebarBtn = document.querySelector(".sidebarBtn");
-        sidebarBtn.onclick = function () {
+        sidebarBtn.onclick = function() {
             sidebar.classList.toggle("active");
             if (sidebar.classList.contains("active")) {
                 sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
@@ -279,16 +379,18 @@
                 sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
         }
     </script>
-     <script>
-        window.onafterprint = function(e){
-      closePrintView();
-  };
-  function myFunction(){
-      window.print();
-  }
-  function closePrintView() {
-      window.location.href = 'adminrent.html';   
-  }
+    <script>
+        window.onafterprint = function(e) {
+            closePrintView();
+        };
+
+        function myFunction() {
+            window.print();
+        }
+
+        function closePrintView() {
+            window.location.href = 'adminrent.html';
+        }
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'>
     </script>
